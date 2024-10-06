@@ -1,0 +1,30 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Измените на вашу основную ветку, если нужно
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'  # Укажите нужную версию
+
+      - name: Install dependencies
+        run: npm install  # Укажите команду для установки зависимостей вашего проекта
+
+      - name: Build project
+        run: npm run build  # Укажите команду для сборки вашего проекта
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build  # Укажите папку с вашими собранными файлами
