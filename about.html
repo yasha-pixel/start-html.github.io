@@ -8,18 +8,33 @@
     <a href="index.html"> Вернуться на главную</a>
     <h1 align = 'center '>Начало</h1>
     <a href="HTML.PDF" target="_blank">Мануал по 1 уроку</a><br>
-    <font size = "5"><b>Теги для стилей текста:</b><br></font>
+    <font size = "5"><b>Стиль текста</b><br></font>
     <ol>
-      <li> <b>strong</b> или <b>b</b> - Жирный шрифт</li>
-      <li><b>align</b> - выравнивание текста взависимости от значения <br> <b>Примеры</b>
-          <ul>
+      <li> <b>strong</b> или <b>b</b> - <b> Жирный шрифт</b></li>
+      <li><b>i</b>- <i>Наклонный текст</i></li>
+      <li><b>u</b> - <u>Подчеркнутый текст</u></li>
+      <li><b>strike</b> - <strike>Перечеркнутый</strike></li>
+      <li><b>tt</b> - <tt>моноширинный шрифт</tt></li>
+      <li><b>small</b> - <small>Малый</small></li>
+      <li><b>big</b> - <big>Большой</big></li>
+      <li><b>sup</b> - Верхний<sup>индекс</sup></li>
+      <li><b>sub</b> - Нижний <sub>индекс</sub></li>
+      <li><b>pre</b> - текст заключённый в данный тег выводится браузерами на экран в
+том виде в котором он был набран, т.е. со всеми пробелами и переносами строк  - <pre>СЛОН.
+Дали туфельки слону.
+Взял он туфельку одну
+И сказал: - Нужны пошире,
+И не две, а все четыре!
+</pre></li>
+      <font size = '5'><b>align - выравнивание текста взависимости от значения</b></font> <br><b>Примеры</b>
+          <ol>
             <li> <b>align="center"</b> - Выравнивает по центру</li>
             <li><b>align="left"</b> - Выравнивание по левому краю</li>
             <li><b>align="right"</b> - Выравнивание по проавому краю</li>
             <li><b>align="justify"</b>- выравнивание по побоим краям документа. Здесь нужен
               текст подлиней чтобы эффект был
              хорошо виден при открытии документа
-          </ul>
+          </ol>
     </ol>
     <ol>
   <li><b>FONT</b> - шрифт<br><b>Пример написания</b></li>
@@ -71,7 +86,33 @@
     <ol>
       <li><b>font color = "#ff000"</b> - <font color = "#ff000">Цвет шрифта станет красным.</font></li>
       <li><b>font color="red"</b> - <font color = 'red'> Цвет шрифта станет красным </font></li>
+      <li><b>body text ="#ff8c40"</b> - если присудить этому атрибуту любой цвет из доступной палитры то весь текст в
+нашей странице окрасится, кроме тех мест, где мы "принудительно" указали другой цвет</li>
+      <li><b>body bgcolor="#40caff"</b> - А вот атрибут тега body bgcolor и его значение задает цвет фона страницы</li>
     </ol>
-
+    <font size = "5"><b>Шрифт : &lt;font face="arial"></b></font>
+    <ol>
+      <li><b>font face="arial"</b> - <font face="arial">Текст 1 </font></li>
+      <li><b>font face="times new roman"</b> - <font face="times new roman">Текст 2</font></li>
+      <li><b>font face="comic sans ms"</b> - <font face="comic sans ms">Текст 3</font></li>
+    </ol>
+    <h1 align = "center"><font size = '8' face = 'comic sans ms '> Глава 2 - Рисунки</h1>
+      <font size = "5" face = ' comic sans ms'><pre>
+<b><u>img src="foto.jpg"</u></b>
+Где <b><u>foto.jpg </b></u>это название Вашей фотографии в данном случае, так как фото лежит рядом с
+html документом, путь к ней мы не указываем.
+<font size = "5"><b><u>img не требует закрывающего тега!</b></u><br>
+<b>Атрибуты тега img</b></pre></font>
+      <ol>
+        <li><b>img src="foto.jpg" align="left"</b> - фото слева от текста </li>
+        <li><b>img src="foto.jpg" align="right"</b> - фото справа от текста </li>
+        <li><b>img src="foto.jpg" align="bottom"</b> - текст выше фото </li>
+        <li><b>img src="foto.jpg" align="middle"</b> - текст ниже фото </li>
+        <li><b>img src="foto.jpg" align="top"</b> - текст посередине</li>
+      </ol>
+      <p align = "center"><img src="imagine/room.png" alt="middle" height="100px" vspace="10"><b><pre>
+        img src="foto.jpg" vspace="10"</b> - Атрибут <b><u>vspace</u></b> задаёт расстояние по вертикали от
+        рисунка до текста, в данном случае мы задали расстояние в 10 пикселей</p><pre>
+  <p><b>img src="foto.jpg" hspace="25"</p> - Расстояние по горизонтали соответственно </b>
       </body>
 </html>
