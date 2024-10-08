@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Таблицы</title>
+  </head>
+  <body>
+    <font face = 'comic sans ms'>
+
+    <a href="index.html">Вернуться на главную</a><br>
+    <div align ='center'><font size = "10" >Таблицы</font>
+    </div>
+    <p>
+Помимо прочих объектов в свой сай.Вы можете вставить таблицы.. и сразу забегая вперёд
+скажу о том что они имеют не малую значимость при создании сайта. С помощью таблицы можно
+не только выложить ту или иную информацию, тарифную сетку или график дежурств к примеру,
+но и взяв ёе за основу полностью построить на ней свой сайт, таблицы порой незаменимы при
+верстке страницы, но об этом позже. А сейчас давайте научимся её рисовать</p>
+<h1 align = 'center'>Рисуем таблицу</h1>
+<p>Тег <b><u>table</u></b> задаёт начало и конец таблицы, любая таблица, как известно, состоит из строк и
+столбцов, для этого есть ещё два тега<br>
+&lttr&gt; - строка таблицы<br>
+&lttds&gt; - столбец таблицы<br>
+Вместе эти теги пишутся так:
+<pre>
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td&gt;ячейка&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+</p>
+<table border = "1" >
+<tr>
+<td>строка1 ячейка1</td>
+<td>строка1 ячейка2</td>
+<td>строка1 ячейка3</td>
+</tr>
+<tr>
+<td>строка2 ячейка1</td>
+<td>строка2 ячейка2</td>
+<td>строка2 ячейка3</td>
+</tr>
+<tr>
+<td>строка3 ячейка1</td>
+<td>строка3 ячейка2</td>
+<td>строка3 ячейка3</td>
+</tr>
+</table>
+<ul>
+  <li>colspan - определяет какое количество столбцов будет занимать данная ячейка</li>
+  <li>rowspan - количество рядов занимаемое ячейкой</li>
+</ul><br>
+<p>Пример кода:<br><pre>
+  &lt;tr>
+      &lt;td>строка3 ячейка1&lt;/td>
+      &lt;td colspan="2">строка3 ячейка2&lt;/td>
+      &lt;td>строка3 ячейка3&lt;/td>
+  &lt;/tr></pre></p>
+
+<table border = "1" >
+  <tr>
+    <td>строка1 ячейка1</td>
+    <td>строка1 ячейка2</td>
+    <td>строка1 ячейка3</td>
+  </tr>
+  <tr>
+    <td>строка3 ячейка1</td>
+    <td colspan="2" align = 'center'>объедененая ячейка <font color = 'red'>colspan</font></td>
+  </tr>
+</table>
+<p>Теперь попробуем объединить весь первый столбец в одну ячейку, используя атрибут
+<b>rowspan</b>, ну точнее растянем ячейку первой строчки первого столбца на три строки и на сей раз
+сразу уберём лишнее.</p>
+<pre><font size = '4'>
+    &lttable <b>border = '1'</b>>
+      &lttr>
+        &lttd <b>rowspan="2"</b>>Строка 1&lt/td>
+        &lttd>Строка 2&lt/td>
+        &lttd>Строка 3&lt/td>
+        &lttd colspan="2" align = 'center'>Строка 4&lt/td>
+      &lt/tr>
+      &lttr>
+        &lttd >Строка 1&lt/td>
+        &lttd>Строка 2&lt/td>
+        &lttd>Строка 3&lt/td>
+        &lttd>Строка 4&lt/td>
+      &lt/tr>
+    &lt/table>
+    </font>
+</pre>
+<table border = '1'>
+  <tr>
+    <td rowspan="2">Строка 1</td>
+    <td>Строка 2</td>
+    <td>Строка 3</td>
+    <td colspan="2" align = 'center'>Строка 4</td>
+  </tr>
+  <tr>
+    <td >Строка 1</td>
+    <td>Строка 2</td>
+    <td>Строка 3</td>
+    <td>Строка 4</td>
+  </tr>
+</table><br>
+<table border="2">
+  <tr>
+    <td>human</td>
+    <td><center>face</center></td>
+  </tr>
+  <tr>
+    <td>body</td>
+    <td><img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/human-1488047-1259469.png?f=webp&w=256" height="100" alt=""></td>
+  </tr>
+</table>
+<h1 align = 'center'>Размеры таблицы</h1><br>
+Обратите внимание на то, что длина и ширина заданы не для всех ячеек. А зачем? Если и так
+таблица будет выровнена по самым широким и длинным ячейкам.. на то она и таблица..
+Еще не всё рассказал..
+Значения атрибутов width и height в таблице могут указываться не только в пикселях, но и
+в процентах
+<font size ='4'><pre>
+&ltcenter>
+  &lttable border="1" width="640" height="480">
+    &lttr>
+    &lttd rowspan="3" width="150">строка1 ячейка1&lt/td>
+    &lttd height="30">строка1 ячейка2&lt/td>
+      &lttd>строка1 ячейка3&lt/td>
+    &lt/tr>
+    &lttr>
+    &lttd height="30">строка2 ячейка2v/td>
+      &lttd>строка2 ячейка3&lt/td>
+    &lt/tr>
+    &lttr>
+      &lttd colspan="2" >строка3 ячейка2&lt/td>
+    &lt/tr>
+  &lt/table>
+&lt/center
+</pre><font>
+
+<center>
+  <table border="1" width="100" height="100">
+    <tr>
+      <td rowspan="3" width="100">строка1 ячейка1</td>
+      <td height="30">строка1 ячейка2</td>
+      <td >строка1 ячейка3</td>
+    </tr>
+    <tr>
+      <td height="50">строка2 ячейка2</td>
+      <td>строка2 ячейка3</td>
+    </tr>
+    <tr>
+      <td colspan="2" align = 'center'><img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/human-icon-download-in-svg-png-gif-file-formats--research-resource-search-employee-office-culture-pack-business-icons-386647.png?f=webp&w=256" alt="" title = 'Вас поймали' height="auto"></td>
+    </tr>
+  </table>
+</center>
+<center>
+  <h1 align = 'center'> Пример на сайте</h1>
+<table border="1" width="640" height="480">
+<tr>
+<td colspan="5" height="30"><center>Заголовок</center></td>
+</tr>
+<tr>
+<td height="30" width="20%"><center>кнопка1</center></td>
+<td width="20%"><center>кнопка2</center></td>
+<td width="20%"><center>кнопка3</center></td>
+<td width="20%"><center>кнопка4</center></td>
+<td width="20%"><center>кнопка5</center></td>
+</tr>
+<tr>
+<td valign="top">содержание:</td>
+<td colspan="4"><center>куча текста</center></td>
+</tr>
+</table>
+</center>
+
+
+
+
+
+
+
+
+</font>
+  </body>
+</html>
